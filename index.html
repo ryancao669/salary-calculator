@@ -1,1 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salary Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <h1>Salary Calculator</h1>
+        <p>Estimate federal, CA state, Social Security, and Medicare taxes.</p>
+      </header>
+
+      <section class="grid">
+        <div class="card">
+          <h2>Inputs</h2>
+
+          <label class="field">
+            <span>Annual salary</span>
+            <div class="input-wrap">
+              <span class="prefix">$</span>
+              <input
+                id="salary"
+                type="number"
+                min="0"
+                step="100"
+                placeholder="80000"
+                inputmode="decimal"
+              />
+            </div>
+          </label>
+
+          <button id="calculate" class="primary">Calculate</button>
+        </div>
+
+        <div class="card results">
+          <h2>Take-home pay</h2>
+          <div id="takeHome" class="big-number">$0</div>
+          <p class="muted">Estimated after taxes</p>
+
+          <div class="table">
+            <div class="row">
+              <span>Federal tax (12%)</span>
+              <strong id="federalTax">$0</strong>
+            </div>
+            <div class="row">
+              <span>CA state tax (6%)</span>
+              <strong id="stateTax">$0</strong>
+            </div>
+            <div class="row">
+              <span>Social Security (6.2%)</span>
+              <strong id="ssTax">$0</strong>
+            </div>
+            <div class="row">
+              <span>Medicare (1.45%)</span>
+              <strong id="medicareTax">$0</strong>
+            </div>
+            <div class="row total">
+              <span>Total taxes</span>
+              <strong id="totalTax">$0</strong>
+            </div>
+          </div>
+
+          <div class="split">
+            <div>
+              <span class="label">Net annual</span>
+              <strong id="netAnnual">$0</strong>
+            </div>
+            <div>
+              <span class="label">Net monthly</span>
+              <strong id="netMonthly">$0</strong>
+            </div>
+            <div>
+              <span class="label">Effective rate</span>
+              <strong id="effectiveRate">0%</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
 
