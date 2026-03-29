@@ -1,1 +1,1 @@
-
+alert("script loaded");
